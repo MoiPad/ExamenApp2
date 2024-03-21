@@ -4,7 +4,7 @@ using SQLite;
 
 namespace ExamenApp2.Models
 {
-    internal class Proveedor
+    public class Proveedor
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
