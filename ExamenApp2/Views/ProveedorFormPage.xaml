@@ -1,12 +1,31 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:ExamenApp2.ViewModels"
+             x:DataType="viewModels:ProveedorFormPageViewModel"
              x:Class="ExamenApp2.Views.ProveedorFormPage"
-             Title="ProveedorFormPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             Title="Formulario de Proveedore">
+    
+    <VerticalStackLayout Padding="30,10,30,10" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+        <Label Text="Nombre del proveedor: "/>
+        <Entry Text="{Binding Nombre}" Keyboard="Text"/>
+        
+        <Label Text="Tipo de proveedor: "/>
+        <Entry Text="{Binding Tipo}" Keyboard="Text"/>
+
+        <Label Text="Telefono del proveedor: "/>
+        <Entry Text="{Binding Telefono}" Keyboard="Telephone"/>
+
+        <Label Text="Correo proveedor: "/>
+        <Entry Text="{Binding Email}" Keyboard="Email"/>
+
+        <Label Text="Servicio proveedor: "/>
+        <Entry Text="{Binding Servicio}" Keyboard="Text"/>
+
+        <Label Text="Dirección del proveedor: "/>
+        <Entry Text="{Binding Direccion}" Keyboard="Text"/>
+
+        <Button Text="Guardar" Command="{Binding CreateUpdateCommand}"/>
+        
     </VerticalStackLayout>
 </ContentPage>
