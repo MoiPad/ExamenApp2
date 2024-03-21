@@ -37,6 +37,12 @@ namespace ExamenApp2.ViewModels
         }
 
         [RelayCommand]
+        private async Task GotoProveedorFormPage()
+        {
+            await App.Current!.MainPage!.Navigation.PushAsync(new ProveedorFormPage());
+        }
+
+        [RelayCommand]
         private async Task SelectProveedor(Proveedor proveedor)
         {
             try
